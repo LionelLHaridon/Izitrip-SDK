@@ -35,9 +35,9 @@ We can discuss these points on the G.Group
 I've created a TO DO file (SDK_TODO), where we can define what is 
 it necessary to implement/change in this SDK.
 
-When you make changes on this SDK, or when you see that a convention
-is adopted, please write it down here, in
-the SDK_TODO file and in the CONVENTIONS file and commit. Thank you =).
+When you make important changes on this SDK, or when you see that a convention
+is adopted, please write it down in the apropriate file, such as here, 
+in the SDK_TODO file, in the CONVENTIONS. Thank you =).
  
 When we'll all be OK about this SDK, we'll could close this Git, 
 save the SDK apart, and begin the real work on Izitrip =).
