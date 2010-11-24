@@ -101,7 +101,7 @@ Please see the C.Igniter conventions about this : http://codeigniter.com/user_gu
 
 Thrift Files :
 _______________
-Thrift "shapes" are stored in /system/application/libraries/thrift/shapes/ .
+Thrift "shapes" are stored in /system/application/libraries/thrift/shapes/.
 One directory for one block of services/structures/fonctions.
 These are (with the Thrift PHP library) the only Thrift related 
 content we'll keep generated in the SDK.
@@ -118,8 +118,52 @@ to delete them before commiting in the Git =)..
 
 Static files :
 _______________
-Static files (css, js, images ect...) will be stored in a "static" directory, located at the root of the project.
+Static files (css, js, images ect...) will be stored in a "static" directory, 
+located at the root of the project.
 [NB : We need to find a convention about how naming the cached files]
 
 -------------------------------------------------------------------------------
 
+//-----------------------------------------------------
+//
+// Database Conventions
+//
+//-----------------------------------------------------
+
+Defining fields, working with Thrift's serialization :
+______________________________________________________
+Building the tables, we should only define separate fields for the datas 
+that will be needed to perform searches.
+To store the other datas, we use a BLOB-typed field (that we could call 
+"data" for exemple), which contains a (full) serialized Thrift Data Object.
+
+Here is a little exemple :
+
+  For a common "User" thrift structure like this,
+  struct User {
+	1: string name,
+	2: string email,
+	3: string description,
+	4: string siteUrl,
+	5: string avatarUrl,
+  }
+  
+  The associated table would look like this,
+  | id | name | email | data |
+  
+The full Data object is stored is the BLOB field (not only the
+description, siteUrl and avatarUrl fields !!!).
+
+This SDK is auto-loading two functions to handle the serialization :
+tSerialize() and tUnserialize(), which are aimed to manipulate thrift's 
+data objects.
+
+A little more informations about these two functions :
+
+ //  Thrift data object serializer, returns the serialized content
+ [mixed] tSerialize( $object );
+ 
+ // Unserialize and loads up content into a Thrift data object
+ [void] tUnserialize( $object, $serializedContent );
+ 
+ Take care of using these functions into a try/catch block !
