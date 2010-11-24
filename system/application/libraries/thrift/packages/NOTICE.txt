@@ -1,0 +1,3 @@
+/*
+ * Thrift-Generated PHP files (structures, types ...) goes here
+*/

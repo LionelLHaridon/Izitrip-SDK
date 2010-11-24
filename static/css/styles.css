@@ -1,0 +1,173 @@
+/*****Reset*****/ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****
+	  Basic Elements
+	  Define styles for basic elements: body, h1-h6, ul, ol, a, p, etc.
+*****/  
+  
+body { 
+	background: #2e2f33;
+	color: #525568;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: .8em; 
+	text-align: center; 
+}
+
+a:link, a:visited { color: #006ab3; text-decoration: none; }
+a:hover, a:active { text-decoration: underline; }
+
+label { display: block; font-weight: bold; margin-bottom: 10px; }
+
+p { margin-bottom: 10px; }
+
+h1 { color: #1c7dc1; font-weight: normal; font-size: 20px; margin-bottom: 16px; }
+h1 span { font-weight: bold; }
+
+h2 { color: #525568; font-size: 16px; margin-bottom: 16px; }
+
+h2.background { background:transparent url(background_h2.jpg) repeat-x scroll 0 0; height:40px; line-height:40px; margin-bottom:10px; margin-top:20px;
+padding-left:20px; };
+
+h3 { color: #ffffff; font-size: 12px; height:17px; margin-bottom: 16px; padding-top:5px; background-color: #b1b1b1; }
+
+/*****
+	  BTN 
+*****/ 
+
+
+/*****
+	  Generic Classes
+	  Define styles for simple things like floating to the sides, removing a bottombottom margin on elements, etc  
+	  Yes, these may not be as semantic as we would all like, but they are necessary for coding efficiently  
+*****/ 
+
+.f-left { float: left; } 
+ 
+.f-right { float: right; }
+
+.clear	{ clear: both; }
+
+.blue { color: #187fbe; }
+
+
+
+/*****
+	Pagination
+******/
+
+ul#pagination {
+	
+}
+
+ul#pagination li {
+	float: left;
+	font-weight: bold;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #187ebc;
+	background: #187ebc;
+}
+
+ul#pagination li#current_page {
+	padding: 5px 7px;
+}
+
+ul#pagination li a:link,
+ul#pagination li a:visited
+{
+	font-weight: bold;
+	color: #187ebc;
+	text-decoration: none;
+	background: #ffffff;
+	display: block;
+	padding: 5px 7px;
+}
+
+ul#pagination li#pagination_first,
+ul#pagination li#pagination_first,
+ul#pagination li,
+ul#pagination li
+{
+ 	margin-right: 5px;
+}
+
+ul#pagination li#pagination_first a:link,
+ul#pagination li#pagination_first a:visited,
+ul#pagination li#pagination_last a:link,
+ul#pagination li#pagination_last a:visited
+{
+ 	float: left;
+ 	color: #187ebc;
+	font-weight: bold;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 5px 7px;
+}
+
+ul#pagination li a:hover,
+ul#pagination li a:active,
+ul#pagination li#pagination_first a:hover,
+ul#pagination li#pagination_first a:active,
+ul#pagination li#pagination_last a:hover,
+ul#pagination li#pagination_last a:active
+{
+	color: #ffffff;
+	background: #187ebc;
+}
+
+/*****
+	  Basic Layout
+	  Define the basic template: header, footer, etc. Elements that help to define the basic layout of the site 
+*****/ 

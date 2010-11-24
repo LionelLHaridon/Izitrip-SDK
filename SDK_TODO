@@ -1,0 +1,26 @@
+/*
+ *
+ * @project : Izitrip SDK
+ * @package : SDK_TODO
+ * @author : The Izitrip Team
+ *
+*/
+
+Sdk's To Do List :
+_________________________________
+
+In order to have a working and solid SDK, we still have to do :
+Please modify this list =) , delete things that have been made.
+
+- Defining the better way to implement localization (internationalisation)
+
+- Finishing convention about where files are going, and the way we'll name them
+
+- Choosing the best way to name static files which will be cached (see w/ Steven)
+
+- Defining a convention about the code documentation
+
+- Making sure that everyone is ok with this SDK, and that nothing have
+been forgotten.
+
+- Should we use unit testing ?
