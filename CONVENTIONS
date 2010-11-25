@@ -57,6 +57,16 @@ ___________________
     1: IziTripExceptionCode code, 
   }   
   
+  Also, we could use the Code Igniter's show_error() function to
+  display the exceptions messages :
+  
+  try {
+    stuff();
+  }
+  catch( Exception $e ) {
+    show_error($e->getMessage());
+  }
+  
   
 Casing :
 ___________________
